@@ -1,4 +1,3 @@
-
 function respawn (){
 
     const dessuLamp = document.getElementById('dessulamp')
@@ -8,27 +7,51 @@ function respawn (){
     const enseigne = document.getElementById('enseigne')
     const menus = document.getElementById('menus')
     const horloge = document.getElementById('num2')
+    const conteur = document.getElementById('errorconteur')
     
+    let score = 0;
+
     dessuLamp.addEventListener('click', () =>{
-        dessuLamp.style.opacity = 1
+        score ++;
+        dessuLamp.style.opacity = 1;
+        conteur.innerHTML = score;
+        dessuLamp.setAttribute("disabled");
     })
     barreLamp.addEventListener('click', () =>{
-        barreLamp.style.opacity = 1
+        score ++;
+        barreLamp.style.opacity = 1;
+        conteur.innerHTML = score;
+        barreLamp.setAttribute("disabled");
     })
     cannaper.addEventListener('click', () =>{
-        cannaper.style.opacity = 1
+        score ++;
+        cannaper.style.opacity = 1;
+        conteur.innerHTML = score;
+        cannaper.setAttribute("disabled");
     })
     enfant.addEventListener('click', () =>{
-        enfant.style.opacity = 1
+        score ++;
+        enfant.style.opacity = 1;
+        conteur.innerHTML = score;
+        enfant.setAttribute("disabled");
     })
     enseigne.addEventListener('click', () =>{
-        enseigne.style.opacity = 1
+        score ++;
+        enseigne.style.opacity = 1;
+        conteur.innerHTML = score;
+        enseigne.setAttribute("disabled");
     })
     menus.addEventListener('click', () =>{
-        menus.style.opacity = 1
+        score ++;
+        menus.style.opacity = 1;
+        conteur.innerHTML = score;
+        menus.setAttribute("disabled");
     })
     horloge.addEventListener('click', () =>{
-        horloge.style.opacity = 1
+        score ++;
+        horloge.style.opacity = 1;
+        conteur.innerHTML = score;
+        horloge.setAttribute("disabled");
     })
 }
 respawn();
