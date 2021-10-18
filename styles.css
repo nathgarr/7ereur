@@ -19,3 +19,38 @@ hr{
 div{
     margin-left: 30px;
 }
+#imgbad{
+    position: relative;
+}
+.opacital{
+    position: absolute;
+    opacity: 0;
+}
+#dessulamp{
+    top: 8.5%;
+    left: 59%;
+}
+#barrelamp{
+    top: 33%;
+    left: 56.5%;
+}
+#cannap{
+    top: 62%;
+    left: 4%;
+}
+#enfant{
+    top: 58%;
+    left: 38.5%;
+}
+#enseigne{
+    top: 37.5%;
+    left: 17.5%;
+}
+#menus{
+    top: 50%;
+    left: 93.5%;
+}
+#num2{
+    top: 16.5%;
+    left: 87.2%;
+}
