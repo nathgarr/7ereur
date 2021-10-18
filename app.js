@@ -11,6 +11,7 @@ function respawn (){
     const progress = document.getElementById('progress');
     
     let score = 0;
+    var scorepourcent;
 
     var cannapClick = true;
     var lanptopClick =true;
@@ -20,13 +21,16 @@ function respawn (){
     var enseigneClick=true;
     var menuClick=true;
 
+
     dessuLamp.addEventListener('click', () =>{
         if(lanptopClick==true){
          score ++;
          conteur.innerHTML = score;
+          scorepourcent=score*14.2857142857;
          dessuLamp.style.opacity = 1;  
          lanptopClick=false;
-         progress.style.width = 14.2857142857 + "%";
+         progress.style.width= scorepourcent+"%";
+         progress.setAttribute('aria-valuenow',scorepourcent)
         }
     })
     barreLamp.addEventListener('click', () =>{
@@ -35,7 +39,9 @@ function respawn (){
             barreLamp.style.opacity = 1;
             conteur.innerHTML = score;
             lempbarreClick=false;
-            progress.style.width = 14.2857142857 + "%";
+            scorepourcent=score*14.2857142857;
+            progress.style.width= scorepourcent+"%";
+            progress.setAttribute('aria-valuenow',scorepourcent)
         }
     })
     cannaper.addEventListener('click', () =>{
@@ -45,7 +51,9 @@ function respawn (){
           score ++;
           conteur.innerHTML = score;
           cannapClick=false;
-          progress.style.width = 14.2857142857 + "%";
+          scorepourcent=score*14.2857142857;
+            progress.style.width= scorepourcent+"%";
+            progress.setAttribute('aria-valuenow',scorepourcent)
         }
     })
     enfant.addEventListener('click', () =>{
@@ -54,7 +62,9 @@ function respawn (){
             enfant.style.opacity = 1;
             conteur.innerHTML = score;
             enfantClick=false;
-            progress.style.width = 14.2857142857 + "%";
+            scorepourcent=score*14.2857142857;
+            progress.style.width= scorepourcent+"%";
+            progress.setAttribute('aria-valuenow',scorepourcent)
         }
     })
     enseigne.addEventListener('click', () =>{
@@ -63,7 +73,9 @@ function respawn (){
             enseigne.style.opacity = 1;
             conteur.innerHTML = score;
             enseigneClick=false;
-            progress.style.width = 14.2857142857 + "%";
+            scorepourcent=score*14.2857142857;
+            progress.style.width= scorepourcent+"%";
+            progress.setAttribute('aria-valuenow',scorepourcent)
         }
     })
     menus.addEventListener('click', () =>{
@@ -72,7 +84,9 @@ function respawn (){
             menus.style.opacity = 1;
             conteur.innerHTML = score;  
             menuClick=false;
-            progress.style.width = 14.2857142857 + "%";
+            scorepourcent=score*14.2857142857;
+            progress.style.width= scorepourcent+"%";
+            progress.setAttribute('aria-valuenow',scorepourcent)
         }
     })
     horloge.addEventListener('click', () =>{
@@ -80,7 +94,9 @@ function respawn (){
             score ++;
             horloge.style.opacity = 1;
             conteur.innerHTML = score;
-            progress.style.width = 14.2857142857 + "%";
+            scorepourcent=score*14.2857142857;
+            progress.style.width= scorepourcent+"%";
+            progress.setAttribute('aria-valuenow',scorepourcent)
         }
     })
 }
