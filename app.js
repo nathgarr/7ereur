@@ -8,50 +8,80 @@ function respawn (){
     const menus = document.getElementById('menus')
     const horloge = document.getElementById('num2')
     const conteur = document.getElementById('errorconteur')
+    const progress = document.getElementById('progress');
     
     let score = 0;
 
+    var cannapClick = true;
+    var lanptopClick =true;
+    var lempbarreClick =true;
+    var enfantClick=true;
+    var numClick=true;
+    var enseigneClick=true;
+    var menuClick=true;
+
     dessuLamp.addEventListener('click', () =>{
-        score ++;
-        dessuLamp.style.opacity = 1;
-        conteur.innerHTML = score;
-        dessuLamp.setAttribute("disabled");
+        if(lanptopClick==true){
+         score ++;
+         conteur.innerHTML = score;
+         dessuLamp.style.opacity = 1;  
+         lanptopClick=false;
+         progress.style.width = 14.2857142857 + "%";
+        }
     })
     barreLamp.addEventListener('click', () =>{
-        score ++;
-        barreLamp.style.opacity = 1;
-        conteur.innerHTML = score;
-        barreLamp.setAttribute("disabled");
+        if(lempbarreClick==true){
+            score ++;
+            barreLamp.style.opacity = 1;
+            conteur.innerHTML = score;
+            lempbarreClick=false;
+            progress.style.width = 14.2857142857 + "%";
+        }
     })
     cannaper.addEventListener('click', () =>{
-        score ++;
-        cannaper.style.opacity = 1;
-        conteur.innerHTML = score;
-        cannaper.setAttribute("disabled");
+        
+        if(cannapClick==true){
+          cannaper.style.opacity = 1;  
+          score ++;
+          conteur.innerHTML = score;
+          cannapClick=false;
+          progress.style.width = 14.2857142857 + "%";
+        }
     })
     enfant.addEventListener('click', () =>{
-        score ++;
-        enfant.style.opacity = 1;
-        conteur.innerHTML = score;
-        enfant.setAttribute("disabled");
+        if(enfantClick==true){
+            score ++;
+            enfant.style.opacity = 1;
+            conteur.innerHTML = score;
+            enfantClick=false;
+            progress.style.width = 14.2857142857 + "%";
+        }
     })
     enseigne.addEventListener('click', () =>{
-        score ++;
-        enseigne.style.opacity = 1;
-        conteur.innerHTML = score;
-        enseigne.setAttribute("disabled");
+        if(enseigneClick==true){
+            score ++;
+            enseigne.style.opacity = 1;
+            conteur.innerHTML = score;
+            enseigneClick=false;
+            progress.style.width = 14.2857142857 + "%";
+        }
     })
     menus.addEventListener('click', () =>{
-        score ++;
-        menus.style.opacity = 1;
-        conteur.innerHTML = score;
-        menus.setAttribute("disabled");
+        if(menuClick==true){
+            score ++;
+            menus.style.opacity = 1;
+            conteur.innerHTML = score;  
+            menuClick=false;
+            progress.style.width = 14.2857142857 + "%";
+        }
     })
     horloge.addEventListener('click', () =>{
-        score ++;
-        horloge.style.opacity = 1;
-        conteur.innerHTML = score;
-        horloge.setAttribute("disabled");
+        if(numClick==true){
+            score ++;
+            horloge.style.opacity = 1;
+            conteur.innerHTML = score;
+            progress.style.width = 14.2857142857 + "%";
+        }
     })
 }
 respawn();
